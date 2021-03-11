@@ -1,0 +1,12 @@
+@media print{
+	header,.fatfooter,footer,.accesskey, .customer_service{
+		display:none;
+	}
+	.cp{
+		img{
+			// float: left;
+			// width:40%;
+			// margin:0px 1em 1em 0;
+		}
+	}
+}

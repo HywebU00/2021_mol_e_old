@@ -1,0 +1,95 @@
+$function_color:#6c6c6c;
+//可自訂顏色，或是自帶既有變數，但請注意背景色與字的對比度
+//範例：$function_color:#000;
+//icon基本設定
+%function_before {
+    vertical-align: middle;
+    content: "";
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: .2em;
+    display: inline-block;
+}
+
+.function {
+    margin: 0px 0 10px;
+    overflow: hidden;
+    float: right;
+    @include box-sizing();
+    ul {
+        padding: 0;
+        margin: 0;
+        li {
+            list-style: none;
+            display: block;
+            float: left;
+            margin: 0 3px 3px 0;
+            button,
+            a {
+                font-size: .938em;
+                display: block;
+                padding: .1em 1em .1em 2em;
+                background-color: $function_color;
+                color: #FFF;
+                background-repeat: no-repeat;
+                background-position: 7px 10px;
+                @include border-radius(4px);
+                text-decoration: none;
+                &:hover,
+                &:focus {
+                    background-color: darken($function_color, 10);
+                    background-repeat: no-repeat;
+                    background-position: 7px 10px;
+                }
+            } // 回上一頁
+            &.back {
+                a {
+                    background-image: url(../images/function_back.png);
+                }
+            } // 友善列印
+            &.print {
+                a {
+                    background-image: url(../images/function_print.png);
+                }
+            } // 轉寄友人
+            &.forward {
+                a {
+                    background-image: url(../images/function_forward.png);
+                }
+            }
+        }
+    }
+}
+
+//quickLink
+.quickLink {
+    float: none;
+    clear: both;
+    margin: 20px 0;
+    text-align: right;
+    float: right;
+}
+
+.quickLink ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.quickLink ul li {
+    display: inline;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    background-image: none;
+}
+
+.quickLink ul li a.back {
+    background-image: url(../images/back.gif);
+    background-repeat: no-repeat;
+    background-position: 5px 4px;
+    padding: 0 10px 0 30px;
+    display: inline;
+    color: #333;
+    text-decoration: none;
+}

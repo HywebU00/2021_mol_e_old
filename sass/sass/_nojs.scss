@@ -1,0 +1,202 @@
+// 以下皆是設定 測試無障礙關閉js 的純css排版
+a.goCenter {
+    position: absolute;
+    top: -2.2em;
+    left: 50%;
+    margin-left: -480px;
+    padding: 0 .5em;
+    height: 2em;
+    line-height: 2em;
+    background: $secondaryColor;
+    color: #fff;
+    text-decoration: none;
+    z-index: 999999999999;
+    opacity: 0;
+    transition: .5s;
+    @include border-radius(0px 0px 4px 4px);
+    color: #FFF;
+    @include screen("mobile") {
+        display: none;
+    }
+    &:hover,
+    &:focus {
+        outline: none;
+        top: 0;
+        opacity: 1;
+    }
+}
+
+// no-js
+.no-js {
+    noscript {
+        display: block;
+        padding: .5em;
+        border: 2px solid $primaryColor;
+        background: #FFF;
+        color: #666;
+        overflow: hidden;
+        line-height: 1.45em;
+        font-size: .813em;
+        margin: 0 .5em .5em;
+        @include border-radius(4px);
+        @include box-sizing;
+        a {
+            color: $primaryColor;
+            &:hover,
+            &:focus {
+                color: $aHover;
+            }
+        }
+    }
+    .search {
+        noscript {
+            margin-left: 1%;
+            margin-right: 1%;
+        }
+    }
+    .tabSet {
+        width: 100%;
+
+        margin: 0 auto;
+        .tabItem {
+            width: 100%;
+            display: block;
+            position: relative;
+            color: #fff;
+            margin-bottom: 0px;
+            border-bottom: 3px solid #ddd;
+            background-color: $primaryColor;
+            >a {
+                background: none;
+                font-size: 1.5em;
+                color: #fff;
+            }
+            &:before {
+                display: none;
+            }
+            &.active {
+                color: #fff;
+                width: 100%;
+                display: block;
+                position: relative;
+                border-bottom: 3px solid #ddd;
+                >a {
+                    color: #fff;
+                    background: none;
+                }
+            }
+        }
+        .tabContent {
+
+            position: relative;
+            display: block;
+        }
+    }
+    .block08 {
+        .tabSet {
+            .tabItem {
+                background-color: $color-default;
+            }
+        }
+    }
+    .block02 .col:first-child{
+        .more {
+            display: block;
+            margin-top: 20px;
+        }
+    }
+
+    .block05 {
+        .more {
+            display: block;
+            margin-top: 20px;
+        }
+    }
+    .bigbanner {
+        div.img-container {
+            display: none;
+        }
+        div.img-container:first-child {
+            display: block;
+        }
+    }
+    .business {
+        .businessblock {
+            display: none;
+        }
+        .businessblock:first-child {
+            display: block;
+        }
+    }
+    .statistics {
+        .statistics_block {
+            display: none;
+        }
+        .statistics_block:first-child {
+            display: block;
+        }
+    }
+    .service {
+        overflow: hidden;
+        .servicebanner {
+            display: none;
+            float: left;
+            margin-right: 10px;
+            img {
+                width: 330px;
+            }
+            .fb-page {
+                width: 330px;
+                height: 290px;
+            }
+        }
+        .servicebanner:nth-child(1),
+        .servicebanner:nth-child(2),
+        .servicebanner:nth-child(3) {
+            display: block;
+        }
+    }
+    .adSlider {
+        text-align: left;
+        .img-container {
+            display: inline-block;
+        }
+    }
+    .community_links {
+        >ul>li {
+            vertical-align: top;
+        }
+        ul {
+            li {
+                ul {
+                    position: relative;
+                }
+            }
+        }
+    }
+    .cp {
+        .slider-for {
+            div {
+                width: 49%;
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+        .slider-nav {
+            display: none;
+        }
+        .cp_photo {
+            div {
+                width: 49%;
+                display: inline-block;
+            }
+        }
+    }
+    .tabContent{
+    	.select{
+    		.explain{
+    			display: block;
+    		}
+    	}
+    }
+}

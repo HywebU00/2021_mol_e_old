@@ -1,0 +1,131 @@
+/*pagination*/
+.pagination {
+    margin: 10px auto 5px;
+    padding: 0px;
+    display: block;
+    text-align: center;
+    clear: both;
+    font-size: .938em;
+    @include clearfix(); // outline: 1px solid red;
+    span {
+        color: $primaryColor;
+        margin: 0px .5em;
+    }
+    .page {
+        margin: 0px 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin-bottom: 5px;
+            margin-right: 3px;
+            list-style: none;
+            @include box-sizing(border-box);
+            a {
+                border-radius: 5px;
+                padding: 6px 10px;
+                font-weight: 800;
+                display: block;
+                white-space: nowrap;
+                color: $color-word;
+                background-color: rgb(247, 247, 247); // Old browsers
+                @include filter-gradient(#f7f7f7, #eaeaea, vertical); // IE6-9
+                @include background-image(linear-gradient(top, rgba(247, 247, 247, 1) 0%, rgba(234, 234, 234, 1) 100%));
+                border: #ccc solid 1px;
+                &:hover,
+                &:focus {
+                    background: $primaryColor;
+                    color: #fff !important;
+                    border: $primaryColor solid 1px;
+                }
+            }
+            &.active {
+                a {
+                    color: #fff !important;
+                    background: $primaryColor;
+                    border: $primaryColor solid 1px;
+                }
+            }
+            &.first,
+            &.prev,
+            &.next,
+            &.last {
+                a {
+                    background-image: url(../images/pageBtn.png);
+                    background-repeat: no-repeat;
+                    background-size: 53px;
+                    background-color: #eee;
+                    height: 37px;
+                    width: 40px;
+                    border: 1px solid #bbb;
+                    font-size: 0;
+                    margin: 0;
+                    padding: 12px 10px 0;
+                    @include box-sizing(border-box);
+                    &:hover,
+                    &:focus {
+                        background-color: #ffc;
+                    }
+                }
+                &.first a {
+                    background-position: 8px -53px;
+                }
+                &.prev a {
+                    background-position: 8px 7px;
+                }
+                &.next a {
+                    background-position: -20px 7px;
+                }
+                &.last a {
+                    background-position: -20px -53px;
+                }
+            }
+        }
+    }
+}
+.pagination .total {
+    padding: 5px;
+    select {
+        margin-right: 5px;
+    }
+    button {
+        min-width: 50px !important;
+        margin: -3px 0 0 0;
+        display: inline-block;
+        height: 2.4em;
+        background-color: $color-gray;
+        color: #333;
+        border: 1px solid $color-gray;
+    }
+}
+@media (max-width: 767px) {
+    .pagination .total select.form-control {
+        margin: 0px 0px;
+        text-align: center;
+    }
+    .pagination .form_inline {
+        display: none;
+    }
+}
+/*----------------------------------------------------條件查詢 */
+.condition {
+    float: right;
+    margin: 0px 0 1em;
+    background-color: #fff;
+    a {
+        display: inline-block;
+        padding: 8px 6px 8px 30px;
+        background: url(../images/search_icon.png) no-repeat 8px 10px;
+        line-height: 110%;
+        border: 1px solid #fff !important;
+        text-decoration: none;
+        color: #666;
+        &:hover {
+            border-color: #bbb !important;
+            box-shadow: rgba(0, 0, 0, 0.35) 0 0 4px;
+            color: #333;
+            background-color: #fff;
+        }
+    }
+}

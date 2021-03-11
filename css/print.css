@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background-image:none; background-color:#FFF}
+.header, .accesskey, .fatfooter, footer, .connectionblock, .scrollToTop, .mainleftblock{ display:none}
+.container{ width:100%;max-width:100%}
+.main{padding:20px; background-color:#fff;background-image: none }
+.innerpage:before{
+	background-image: none;
+	background-color: #fff;
+}
+.innerpage .content{width: 100%;float: none}

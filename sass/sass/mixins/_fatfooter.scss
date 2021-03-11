@@ -1,0 +1,23 @@
+$fatFooterliMargin: 1%; // 欄左右的留白，盡量少，fatfooter字過多
+@mixin make-fatfooter($fatFooterliLength, $fatFooterMaxWidth) {
+    nav {
+        max-width: $fatFooterMaxWidth;
+        >ul>li {
+            $fatFooterliMargin:0%;
+            $fatFooterWidth: 100%;
+            // outline: 1px solid red;
+            margin-left: -4px;
+            @include box-sizing(border-box);
+            width: floor((($fatFooterWidth / $fatFooterliLength))*1);
+            @include screen("tablet") {
+                $fatFooterliMargin: 0%;
+                width: floor(($fatFooterWidth / $fatFooterliLength)*1);
+
+            }
+            @include screen("mobile") {
+                width: 95%;
+                margin: 0px auto 3px;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+//http://lab.25sprout.com/responsive_table/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    @include screen('xs_mobile') {
+        width: 100%;
+        position: relative;
+    }
+    th,
+    td {
+        padding: .5em;
+        text-align: left;
+    }
+    td {
+        border: #ddd 1px solid;
+        word-break: break-all;
+        a {
+            word-break: break-all;
+        }
+        &.aCenter {
+            text-align: center;
+        }
+        &.aRight {
+            text-align: right;
+        }
+    }
+    th {
+        background-color: #F3F3F3;
+        color: #333;
+        border: #DDD 1px solid;
+        text-align: center;
+        white-space: nowrap;
+    }
+    &.table_hover {
+        tr:hover {
+            background: #FCFCFC;
+        }
+    }
+    &.table_sprite {
+        tr:nth-child(even) {
+            background: #FCFCFC;
+        }
+    }
+    
+}

@@ -1,0 +1,121 @@
+// 以下皆是設定 中字型時的調整
+// middleword
+.middleword {
+    .Hotsearch {
+        width: 42%;
+        @include screen('tablet') {
+            width: auto;
+        }
+        .form_grp {
+            width: 70%;
+            @media(max-width: 1200px) {
+                width: 67%;
+            }
+            @media(max-width: 600px) {
+                width: 100%;
+            }
+        }
+        .keywordHot {
+            ul {
+                li {
+                    margin: 0 0 5px 110px;
+                    span {
+                        width: 110px;
+                        margin-left: -110px;
+                    }
+                    @media(max-width: 600px) {
+                        margin: 0 0 15px 0px;
+                        span {
+                            width: auto;
+                            margin-left: 0px;
+                            margin-bottom: 5px;
+                            display: block;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .block04 {
+        .statistics_block {
+            a {
+                .updown {
+                    bottom: 10px;
+                    @media(max-width: 1200px)and(min-width: 992px) {
+                        bottom: 0px;
+                    }
+                    @media(max-width: 991px)and(min-width:720px) {
+                       bottom: 0px;;
+                    }
+                    @media(max-width:575px) {
+                        bottom: 0px;
+                    }
+                }
+                .rate {
+                    margin: 10px 0 20px;
+                }
+                h3 {
+                    height: 90px;
+                }
+                @media(max-width: 1200px)and(min-width: 992px) {
+                    .image {
+                        margin-right: -10px;
+                    }
+                }
+            }
+        }
+    }
+    .recommend {
+        ul li {
+            a {
+                padding: 0px 10px 0px 75px;
+                height: 70px;
+            }
+        }
+    }
+    .listph2 li p {
+        height: 55px;
+    }
+    .listph2 ul ul li.spacing {
+        margin: 0 5px 0 0
+    }
+    .fastlink {
+        ul {
+            li {
+                a {
+                    &:hover {
+                        width: 200px;
+                        &:before {
+                            width: 160px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 主題三
+    .delivery_staff_block {
+        .company_name {
+            ul {
+                li {
+                    &:after {
+                        right: -40px;
+                    }
+                    span.relation {
+                        // line-height: 1.5em;
+                        //  padding: 10px 20px 5px 0;
+                        width: 43%;
+                        @include screen('tablet') {
+                            width: 48%;
+                        }
+                        @include screen('mobile') {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 
+}

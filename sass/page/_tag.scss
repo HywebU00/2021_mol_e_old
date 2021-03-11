@@ -1,0 +1,408 @@
+//write it in your sass setting
+.bigbanner {
+    width: 100%;
+    @include screen('tablet') {
+        padding-bottom: 20px;
+    }
+    @include gutter(0);
+    .img-container {
+        height: 400px;
+        width: 100%;
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        @include screen('tablet') {
+            height: auto;
+        }
+        @include screen('mobile') {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    a {
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        .caption {
+            position: absolute;
+            width: 100%;
+            height: 3em;
+            background: rgba(0, 0, 0, .45);
+            padding: 1em .5em .5em;
+            font-size: 1.125em;
+            color: #FFF;
+            margin: 0;
+            text-align: center;
+            bottom: 0;
+            @include text-overflow;
+            @include box-sizing;
+            @include screen('mobile') {
+                height: 2em;
+                width: 100%;
+                left: 0;
+                padding: .5em;
+            }
+        }
+    }
+    a:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border: 2px solid #ffc000;
+        display: none;
+    }
+    a:focus:before {
+        display: block;
+    }
+    .slick-dots {
+        bottom: -20px;
+    }
+    .slick-dots li.slick-active button:before {
+        background: #f2ba1d;
+    }
+    .slick-dots li button:hover:before,
+    .slick-dots li button:focus:before {
+        opacity: 1;
+        background: #f2ba1d;
+    }
+    @include screen('tablet') {
+        .slick-dots li button:before {
+            background: #818984;
+        }
+        .slick-dots li.slick-active button:before {
+            opacity: 1;
+            background: #08c4cb;
+        }
+        .slick-dots li button:hover:before,
+        .slick-dots li button:focus:before {
+            opacity: 1;
+            background: #08c4cb;
+        }
+        .slick-prev {
+            left: 0px;
+        }
+        .slick-next {
+            right: 0px;
+        }
+    }
+}
+//業務專區
+.business {
+    margin-bottom: 20px;
+    .slick-prev,
+    .slick-next {
+        background-color: transparent;
+        @include opacity(0.5);
+    }
+    .slick-next:hover,
+    .slick-next:focus,
+    .slick-prev:hover,
+    .slick-prev:focus {
+        @include opacity(1);
+    }
+    .slick-prev {
+        left: -60px;
+    }
+    .slick-next {
+        right: -60px;
+    }
+    .slick-dots {
+        bottom: 0px;
+        position: absolute;
+    }
+    .slick-dots li button:hover:before,
+    .slick-dots li button:focus:before {
+        opacity: 1;
+        background: #08c4cb;
+    }
+}
+//勞動統計
+.statistics {
+    margin-bottom: 20px;
+    .slick-prev,
+    .slick-next {
+        background-color: transparent;
+        @include opacity(0.5);
+    }
+    .slick-next:hover,
+    .slick-next:focus,
+    .slick-prev:hover,
+    .slick-prev:focus {
+        @include opacity(1);
+    }
+    .slick-prev {
+        left: -10px;
+        background-image: url(../vendor/slick/icon_arrow_left.png);
+    }
+    .slick-next {
+        right: -10px;
+        background-image: url(../vendor/slick/icon_arrow_right.png);
+    }
+    .slick-dots li button:before {
+        background: #818984;
+    }
+    .slick-dots li.slick-active button:before {
+        opacity: 1;
+        background: #08c4cb;
+    }
+    .slick-dots li button:hover:before,
+    .slick-dots li button:focus:before {
+        opacity: 1;
+        background: #08c4cb;
+    }
+}
+//服務專區
+.service {
+    margin-bottom: 20px;
+    .slick-prev,
+    .slick-next {
+        // background-color: transparent;
+        @include opacity(0.5);
+    }
+    .slick-next:hover,
+    .slick-next:focus,
+    .slick-prev:hover,
+    .slick-prev:focus {
+        @include opacity(1);
+    }
+    .slick-prev {
+        left: -60px;
+        background-image: url(../vendor/slick/icon_arrow_left.png);
+    }
+    .slick-next {
+        right: -60px;
+        background-image: url(../vendor/slick/icon_arrow_right.png);
+    }
+    .slick-dots li button:before {
+        background: #818984;
+    }
+    .slick-dots li.slick-active button:before {
+        opacity: 1;
+        background: #08c4cb;
+    }
+    .slick-dots li button:hover:before,
+    .slick-dots li button:focus:before {
+        opacity: 1;
+        background: #08c4cb;
+    }
+    @include screen('xs_mobile') {
+        .slick-prev {
+            left: 5px;
+            background-image: url(../vendor/slick/icon_arrow_left_inverse.png);
+        }
+        .slick-next {
+            right: 5px;
+            background-image: url(../vendor/slick/icon_arrow_right_inverse.png);
+        }
+    }
+}
+//主題網站、外部連結
+.adSlider {
+    margin-bottom: 20px;
+    .slick-prev,
+    .slick-next {
+        background-color: transparent;
+        @include opacity(0.5);
+    }
+    .slick-next:hover,
+    .slick-next:focus,
+    .slick-prev:hover,
+    .slick-prev:focus {
+        @include opacity(1);
+    }
+    .slick-prev {
+        left: 0px;
+        background-image: url(../vendor/slick/icon_arrow_left2.png);
+    }
+    .slick-next {
+        right: 0px;
+        background-image: url(../vendor/slick/icon_arrow_right2.png);
+    }
+    .slick-dots li button:before {
+        background: #818984;
+    }
+    .slick-dots li.slick-active button:before {
+        opacity: 1;
+        background: #08c4cb;
+    }
+    .slick-dots li button:hover:before,
+    .slick-dots li button:focus:before {
+        opacity: 1;
+        background: #08c4cb;
+    }
+    @include screen('mobile') {
+        .slick-prev {
+            left: -10px;
+        }
+        .slick-next {
+            right: -10px;
+        }
+    }
+}
+.slick-dots li {
+    @media(max-width: 400px) {
+        margin: 0 5px;
+    }
+}
+/*-cp2*/
+.cp .slider-for {
+    margin: 0 0 10px 0;
+    padding: 10px 15px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 3px #CCC;
+    position: relative;
+    clear: both;
+}
+.cp .slider-for img {
+    width: 100%;
+    height: auto;
+}
+.cp .slider-for p {
+    text-align: left;
+}
+.cp .slider-nav {
+    margin: 0 0 20px 0;
+    padding: 10px 15px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 3px #CCC;
+    position: relative;
+    clear: both;
+}
+.cp .slider-nav img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.cp .slider-nav div {
+    margin: 0 5px;
+}
+.cp .slider-nav .slick-prev,
+.slider-nav .slick-next {
+    top: 50%
+}
+.cp .slider-nav .slick-prev:before,
+.slider-nav .slick-next:before {
+    opacity: 1;
+    color: #999;
+}
+.cp .slider-nav .slick-next {
+    right: 0px;
+}
+.cp .slider-nav .slick-prev {
+    left: 0px;
+}
+@media (max-width:500px) {
+    .cp .slider-for {
+        margin: 0 0 10px 0;
+        padding: 5px;
+    }
+    .cp .slider-nav {
+        margin: 0 0 20px 0;
+        padding: 5px;
+    }
+    .cp .slider-nav div {
+        margin: 0 0px;
+    }
+    /*箭頭位置-*/
+    .cp .slider-nav .slick-prev,
+    .slider-nav .slick-next {
+        top: 40%
+    }
+}
+@media (max-width:350px) {
+    .cp .slider-nav .slick-prev,
+    .slider-nav .slick-next {
+        top: 30%
+    }
+    .cp .slider-nav .slick-prev:before,
+    .slider-nav .slick-next:before {
+        font-size: 1.25em;
+        opacity: 1;
+        color: #000;
+    }
+}
+//cp_photo
+.cp_photo {
+    width: 80%;
+    margin: 0px auto;
+    padding: 20px 0;
+    clear: both;
+    img {
+        max-width: 100%;
+        max-height: 450px;
+        margin: 0 auto;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        font-size: 2.5em;
+    }
+}
+/*-輪播箭頭*/
+.cp_photo {
+    .slick-next {
+        right: -60px;
+    }
+    .slick-prev {
+        left: -60px;
+    }
+}
+/*-輪播點點*/
+.cp_photo {
+    .slick-dots li button:hover:before,
+    .slick-dots li button:focus:before {
+        background: #08c4cb;
+    }
+    .slick-dots li.slick-active button:before {
+        background: #08c4cb;
+    }
+    .slick-dots {
+        bottom: -10px;
+        margin: 0;
+        li {
+            margin: 0 10px;
+        }
+    }
+    .slick-dots li button:before {
+        background: #818984;
+    }
+    a {
+        position: relative;
+        display: block;
+        height: 100%;
+        width: 100%;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border: 2px solid #ffc000;
+            display: none;
+        }
+        &:focus:before {
+            display: block;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .cp_photo {
+        width: 100%;
+    }
+    .cp_photo .slick-next {
+        right: 0px
+    }
+    .cp_photo .slick-prev {
+        left: 0px
+    }
+}

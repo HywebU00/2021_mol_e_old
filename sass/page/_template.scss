@@ -1,0 +1,398 @@
+body {
+    font-family: $font-family;
+    &.noscroll {
+        // position: fixed!important;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden !important;
+    }
+}
+// 最外圍預設為100%
+.wrapper {
+    width: 100%;
+    margin: 0px auto;
+    @include screen('mobile') {
+        background: #FFF;
+    }
+}
+// 整體共用container樣式，請注意首頁切版頁面的整齊
+.container {
+    padding: 0;
+    margin: 0 auto;
+    max-width: $container-max; //請看_variable.scss
+    // border: 1px solid red;
+    @media (min-width: 992px) and (max-width:1200px) {
+        width: 980px;
+    }
+    // @media (min-width: 768px){
+    //     width:750px;
+    // }
+}
+.main {
+    position: relative;
+    margin: 0 auto;
+    padding: 0; // max-width: $container-max; 
+    // 可先設定一個中央區塊最大寬，限制accesskey對齊
+    background-color: #fff;
+    @include screen('tablet') {
+        padding: 0;
+    }
+    @include screen('mobile') {
+        padding: 60px 0 0 0;
+    }
+    // 內頁標題設定
+    h2 {
+        line-height: 1.25em;
+        margin-bottom: 20px;
+        color: #000;
+        font-weight: 600;
+        font-size: 1.5em;
+        padding: 10px 15px;
+    }
+}
+.more {
+    text-align: right;
+    a {
+        display: inline-block;
+        background: transparent;
+        color: #FFF;
+        width: auto;
+        padding: .3em 2em;
+        background-color: #0e6228;
+        color: #fff;
+        text-align: center;
+        @include transition(all, .3s, ease-out);
+        &:hover,
+        &:focus {
+            background-color: #073114;
+        }
+    }
+}
+:focus {
+    outline: none;
+    box-shadow: 0 0px 0px 2px #f2ba1d inset;
+    @include screen('mobile') {
+        box-shadow: none;
+    }
+}
+//輪播點點的foucs框大小
+.slick-dots li button {
+    min-width: 12px;
+}
+a {
+    cursor: pointer;
+}
+/////////////////////////////////////////////////////////以下為demo範例///
+// 首頁區塊設定
+.section {
+    padding: 0em;
+    [class^="col"] {
+        // border: 2px solid #FFF;
+        //outline:1px solid red;
+        // color:#000;
+        // text-align: center;
+        // line-height: 250px;
+        // font-size: 1.5em;
+        // font-weight: bold;
+        @include box-sizing();
+    }
+    &+.section {
+        padding-top: 0;
+    }
+    >.container {
+        // outline: 1px solid red;
+    }
+}
+// 單欄
+.col-12 {
+    .container {
+        max-width: $container-max;
+    }
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(12);
+        @include make-md-column(12); //992px  width:100%
+        @include make-lg-column(12); //1400px width:100%
+        @include gutter(); //gutter 代表左右要留白
+    }
+}
+// 四欄
+.col-3 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(3); //768px  width:50%
+        @include make-md-column(3); //992px  width:50%
+        @include make-lg-column(3); //1400px width:50%
+        @include gutter(); //gutter 代表左右要留白
+    }
+}
+// 三欄
+.news {
+    .container {
+        @include gutter(); //gutter 代表左右要留白
+    }
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(4);
+        @include make-md-column(4); //992px  width:100%
+        @include make-lg-column(4); //1400px width:100%
+        @include gutter(); //gutter 代表左右要留白
+    }
+}
+// 雙欄 6-6
+.col-6 {
+    // .container {
+    //     @include gutter(); //gutter 代表左右要留白
+    // }
+    @include clearfix();
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(12); //768px  width:50%
+        @include make-md-column(6); //992px  width:50%
+        @include make-lg-column(6); //1400px width:50%
+        @include screen('tablet') {
+            @include gutter(); //gutter 代表左右要留白
+        }
+    }
+}
+// 雙欄 9-3
+.col-9-3 {
+    .prefecture_col3 {
+        @include make-xs-column(12);
+        @include make-sm-column(3); //768px  width:66.6%
+        @include make-md-column(3); //992px  width:66.6%
+        @include make-lg-column(3); //1400px width:66.6%
+        @include gutter(0); //gutter 代表左右要留白
+    }
+    .news_col9 {
+        @include make-xs-column(12);
+        @include make-sm-column(9); //768px  width:33.3%
+        @include make-md-column(9); //992px  width:33.3%
+        @include make-lg-column(9); //1400px width:33.3%
+    }
+}
+// 三欄 3-3
+.col-3-3-3 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(4); //768px  width:33.3%
+        @include make-md-column(4); //992px  width:33.3%
+        @include make-lg-column(4); //1400px width:33.3%
+    }
+    .imgOuter {
+        @include aspect-ratio(4, 3);
+    }
+    &+.col-3-3-3 {
+        background: $primaryColor;
+    }
+}
+// 進階設定，也可以自己寫
+.col-1-2-1 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(3);
+        @include make-md-column(3);
+        @include make-lg-column(3);
+        @include gutter(); //gutter 代表左右要留白
+        min-height: 250px;
+        &:nth-child(2) {
+            @include make-xs-column(12);
+            @include make-sm-column(6);
+            @include make-md-column(6);
+            @include make-lg-column(6);
+        }
+    }
+}
+// 五欄
+.col-5 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(2);
+        @include make-md-column(2);
+        @include make-lg-column(2);
+        &:first-child {
+            @include make-xs-column-offset(0);
+            @include make-sm-column-offset(1);
+            @include make-md-column-offset(1);
+            @include make-lg-column-offset(1);
+        }
+    }
+}
+////////////////////////////////////////////////////////////
+// 為了與首頁區隔，請在內頁加上innerpage ClassName
+.innerpage {
+    padding: 2em 0;
+    @include screen('mobile') {
+        padding-top: 5em;
+    }
+    >.container {
+        z-index: 99;
+    }
+    .mainleftblock {
+        @include make-xs-column(0);
+        @include make-sm-column(0); //768px  width:66.6%
+        @include make-md-column(3); //992px  width:66.6%
+        @include make-lg-column(3); //1400px width:66.6%
+        @include screen('tablet') {
+            display: none;
+        }
+        overflow: hidden;
+    }
+    .content {
+        @include gutter(50px);
+        background-color: #fff;
+        @include make-xs-column(12);
+        @include make-sm-column(12); //768px  width:33.3%
+        @include make-md-column(9); //992px  width:33.3%
+        @include make-lg-column(9); //1400px width:33.3%
+        @include box-sizing(border-box);
+        @include screen('tablet') {
+            padding: 0;
+            @include gutter(50px);
+        }
+        h2 {
+            font-size: 1.375em;
+            background-color: #cd4100;
+            color: #fff;
+            padding: 6px 20px;
+            position: relative;
+            margin: 0 0 15px 0;
+            clear: both;
+            line-height: 140%;
+        }
+    }
+    .content2 {
+        @include gutter(50px);
+        background-color: #fff;
+        @include make-xs-column(12);
+        @include make-sm-column(12); //768px  width:33.3%
+        @include make-md-column(12); //992px  width:33.3%
+        @include make-lg-column(12); //1400px width:33.3%
+        @include box-sizing(border-box);
+        @include screen('tablet') {
+            padding: 0;
+            @include gutter(50px);
+        }
+    }
+}
+//內頁左欄
+.submenu {
+    position: relative;
+    margin: 0px 0 25px 0;
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    h2 {
+        font-size: 1.25em;
+        background-color: $primaryColor;
+        color: #fff;
+        padding: 15px 10px;
+        position: relative;
+        margin: 0;
+        text-align: center;
+        border-bottom: 2px solid #ccc;
+        @include box-sizing(border-box);
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            font-size: 1.063em;
+            a {
+                border-bottom: 1px solid #CCC;
+                color: #333;
+                padding: 10px 20px;
+                display: block;
+                text-decoration: none;
+                @include transition (all, 0.5s, ease);
+                &:hover,
+                &:focus {
+                    background-color: #ddd;
+                    text-decoration: none;
+                    color: $color-red;
+                }
+            }
+            &:last-child a {
+                border-bottom: none;
+            }
+        }
+    }
+}
+.np,
+.lp,
+.cp,
+.ap,
+.forwardForm,
+.qp,
+.sitemap {
+    clear: both;
+}
+/* .mainleftblock .prefecture專區 */
+.mainleftblock .prefecture {
+    background-color: #158537;
+    padding: 30px 0px 25px;
+    text-align: center;
+    margin: 0 0 40px;
+    @include box-sizing(border-box);
+    ul {
+        width: 280px;
+        margin: 0 auto;
+        padding: 0;
+        @media(max-width: 1200px) {
+            width: 150px;
+        }
+        li {
+            margin: 0 5px 5px;
+            position: relative;
+            display: inline-block;
+            width: 110px;
+            height: 100px;
+            background-color: #0e6228;
+            overflow: hidden;
+            img {
+                width: 100px;
+                height: 100px;
+            }
+            a {
+                display: block;
+                width:100%;
+                height:100%;
+                position:relative;
+                .title {
+                    position: absolute;
+                    left: -110px;
+                    top: 0;
+                    bottom: 0;
+                    width: 110px;
+                    height: 100px;
+                    background-color: #000;
+                    color: #fff;
+                    font-size: 1.125em;
+                    text-align:center;
+                    transition: .5s ease-out;
+                    opacity: 1;
+                    display: flex;
+                    justify-content:center;
+                    align-items:center;
+                }
+                &:hover, &:focus {
+                    .title {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        background-color: #000;
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+}
+.hidden {
+    display: none;
+}

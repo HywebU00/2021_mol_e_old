@@ -1,0 +1,47 @@
+.qp, .forwardForm{
+	margin: 1em auto;
+	@include box-sizing;
+	padding:1em 0;
+}
+//------------------formBtn--//
+.formBtn {
+    margin: 10px 0;
+    text-align: center;
+    img {
+        vertical-align: middle;
+        margin: 0 5px;
+    }
+    input.btn {}
+}
+
+.qp, .forwardForm {
+    form {
+        @include screen('xs_mobile') {
+            th,
+            td {
+                display: block;
+                text-align: left;
+            }
+        }
+        input.text2 {
+            width: 23%;
+        }
+        button {
+            @extend %btn;
+            @include btn_setting(darken($color-gray, 20), #FFF);
+            text-shadow: none;
+        }
+        input,
+        textarea,
+        select,
+        button {
+            margin-bottom: 0em;
+        }
+        label{
+            display: inline-block;
+        }
+        caption{
+        	display: none;
+        }
+    }
+}

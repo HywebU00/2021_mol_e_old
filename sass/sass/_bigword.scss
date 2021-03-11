@@ -1,0 +1,182 @@
+// 以下皆是設定 大字型時的調整
+// bigword
+.bigword {
+    .Hotsearch {
+        width: 42%;
+        @include screen('tablet') {
+            width: auto;
+        }
+        .form_grp {
+            width: 70%;
+            @media(max-width: 1200px) {
+                width: 63%;
+            }
+            @media(max-width: 600px) {
+                width: 100%;
+            }
+            input[type="text"] {
+                width: 85% !important;
+            }
+        }
+        .keywordHot {
+            ul {
+                li {
+                    margin: 0 0 5px 130px;
+                    span {
+                        width: 130px;
+                        margin-left: -130px;
+                    }
+                    @media(max-width: 600px) {
+                        margin: 0 0 15px 0px;
+                        span {
+                            width: auto;
+                            margin-left: 0px;
+                            margin-bottom: 5px;
+                            display: block;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .block04 {
+        .statistics_block {
+            a {
+                .updown {
+                    bottom: -20px;
+                }
+                .rate {
+                    margin: 10px 0 20px;
+                    padding-top: 20px;
+                }
+                h3{
+                    height: 100px;
+                }
+                @media(max-width: 1200px)and(min-width: 992px) {
+                    h3 {
+                        position: relative;
+                        width: 100%;
+                        text-align: center;
+                        margin: 0;
+                    }
+                    .image {
+                        float: none;
+                        margin: 0 auto 30px;
+                    }
+                    .rate {
+                        text-align: left;
+                        font-size: 2.8em;
+                    }
+                }
+                @media(max-width:991px)and(min-width:767px) {
+                    .image {
+                        margin-bottom: 50px;
+                    }
+                }
+                @media(max-width:767px) {
+                    h3 {
+                        position: relative;
+                        width: 100%;
+                        text-align: center;
+                        margin: 0;
+                    }
+                    .image {
+                        float: none;
+                        margin: 0 auto 30px;
+                    }
+                    .rate {
+                        text-align: left;
+                        font-size: 2.8em;
+                    }
+                    .updown {
+                        position: relative;
+                        left: 50%;
+                        margin-left: -35px
+                    }
+                    .date {
+                        text-align: center !important;
+                    }
+                }
+                @media(max-width:720px) {
+                    .rate {
+                        text-align: center !important;
+                    }
+                }
+            }
+        }
+    }
+    .recommend {
+        ul li {
+            a {
+                padding: 0px 10px 0px 75px;
+                height: 70px;
+            }
+        }
+    }
+    .listph2>ul>li {
+        height: 330px;
+    }
+    .listph2 li p {
+        height: 65px;
+    }
+    .listph2 ul ul li.spacing {
+        margin: 0 0 10px;
+        display: block;
+    }
+    .fastlink {
+        ul {
+            li {
+                a {
+                    &:hover {
+                        width: 220px;
+                        &:before {
+                            width: 170px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .example-2>.tabItem:before {
+        height: 68px;
+    }
+    // 主題三
+    .delivery_staff_block {
+        .company_name {
+            ul {
+                li {
+                    &:after {
+                        width: 55%;
+                        right: -40px;
+                    }
+                    span.name {
+                        @include screen('tablet') {
+                            width: 40%;
+                        }
+                        @include screen('mobile') {
+                            width: 100%;
+                        }
+                        em {
+                            @include screen('tablet') {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                    span.relation {
+                        // line-height: 1.5em;
+                        //  padding: 10px 20px 5px 0;
+                        width: 50%;
+                        @include screen('tablet') {
+                            width: 50%;
+                        }
+                        @include screen('mobile') {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 
+}

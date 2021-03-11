@@ -1,0 +1,740 @@
+.cp {
+    img {
+        &.float_left {
+            float: left;
+            margin: 0px 1em 1em 0;
+        }
+        &.float_right {
+            float: right;
+            margin: 0px 0 1em 1em;
+        }
+    }
+    a {
+        color: $primaryColor;
+        text-decoration: underline;
+    }
+    article {
+        clear: both;
+        figure {
+            float: left;
+            margin: 5px 15px 15px 2px;
+            letter-spacing: 0;
+            background-color: #fff;
+            padding: 0;
+            @include screen('xs_mobile') {
+                width: 100%;
+            }
+            img {
+                display: block;
+                width: 400px;
+                margin: 0 0 10px;
+                @include screen('xs_mobile') {
+                    width: 100%;
+                }
+            }
+            figcaption {
+                margin: 0 0px 4px;
+                line-height: 140%;
+                width: auto;
+                max-width: 400px;
+                color: #030;
+                @media (max-width: 480px) {
+                    width: 96%;
+                }
+            }
+            &.bigphoto {
+                margin: 5px auto 8px;
+                width: 100%;
+                letter-spacing: 0;
+                padding: 0;
+                position: relative;
+                img {
+                    display: block;
+                    width: 100%;
+                    border: 1px solid #bbb;
+                }
+                figcaption {
+                    margin: 0 4px 4px;
+                    line-height: 140%;
+                    width: 96%;
+                    max-width: 240px;
+                }
+                a {
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+                    display: block;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        border: 2px solid #ffc000;
+                        display: none;
+                    }
+                    &:focus:before {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+.info {
+    font-size: 0.938em;
+    line-height: 2em;
+    list-style: none;
+    margin: 0 0 0.5em 0;
+    clear: both;
+    @include box-sizing;
+    padding: 0 0 0 1em;
+    text-align: right;
+    @include screen('xs_mobile') {
+        text-align: left;
+        padding: 0.8em 0em 0.8em;
+    }
+    li {
+        margin: 0 0 0 20px;
+        display: inline-block;
+        vertical-align: top;
+        background-image: url(../images/link_icon01.png);
+        background-repeat: no-repeat;
+        background-position: 0 12px;
+        padding: 0 0 0 15px;
+        @include screen('tablet') {
+            margin-bottom: .2em;
+        }
+        @include screen('xs_mobile') {
+            width: auto;
+            display: block;
+            margin-left: 0px;
+        }
+        em {
+            font-style: normal;
+        }
+    }
+}
+//--------------------table
+.cp article table,
+.ap article table {
+    margin: 0 auto 1em;
+    width: 99%;
+    line-height: 150%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-top: 4px solid $primaryColor;
+}
+.cp article table.noBorder,
+.ap article table.noBorder {
+    width: auto;
+    margin: 0 0 1em;
+    background-color: transparent
+}
+.cp article table caption,
+.ap article table caption {
+    font-weight: bold;
+    text-align: left;
+    font-size: 1em;
+    padding: 5px 10px 4px;
+}
+.cp article th,
+.cp article td,
+.ap article th,
+.ap article td {
+    vertical-align: top;
+    padding: 15px 12px;
+    border-bottom: 1px solid #d5d7d6;
+    @include box-sizing();
+}
+.cp article table tr td ul,
+.cp article table tr td ol,
+.ap article table tr td ul,
+.ap article table tr td ol {
+    margin-bottom: 0px;
+}
+.cp article table tr:nth-child(even),
+.ap article table tr:nth-child(even) {
+    background-color: lighten($primaryColor, 66);
+}
+/*-*/
+.cp article table.noBorder,
+.ap article table.noBorder {
+    border-top: none;
+}
+.cp article .noBorder th,
+.cp article .noBorder td,
+.ap article .noBorder th,
+.ap article .noBorder td {
+    border: none;
+    padding: 10px
+}
+/*-*/
+.cp article th,
+.ap article th {}
+.cp article th[scope="row"],
+.ap article th[scope="row"] {
+    text-align: right;
+    vertical-align: top;
+    width: 15%;
+    white-space: nowrap;
+    border-right: 1px solid #606261
+}
+.cp article th[scope="col"],
+.ap article th[scope="col"] {
+    text-align: center;
+    vertical-align: middle;
+}
+.cp article table .aCenter,
+.ap article table .aCenter {
+    text-align: center;
+}
+.cp article table .aRight,
+.ap article table .aRight {
+    text-align: right;
+}
+@media (max-width: 767px) {
+    .cp article table,
+    .ap article table {
+        width: 100%;
+    }
+    .cp article table tr,
+    .ap article table tr {
+        margin: 0 0 10px 0;
+        display: block;
+    }
+    .cp article table tr:nth-child(even),
+    .ap article table tr:nth-child(even) {
+        background-color: #fff;
+    }
+    .cp article table tr th,
+    .ap article table tr th {
+        display: none;
+    }
+    .cp article table tr td,
+    .ap article table tr td {
+        display: block;
+        width: 100%;
+        margin: 0
+    }
+    .cp article table tr td:first-child,
+    .ap article table tr td:first-child {
+        background-color: #ffc
+    }
+    .cp article table tr td[data-title="序號"],
+    .ap article table tr td[data-title="序號"] {
+        background-color: #ffc
+    }
+    .cp article table tr td:nth-child(1),
+    .ap article table tr td:nth-child(1) {
+        width: 100%;
+    }
+    .cp article table tr td:nth-child(2),
+    .ap article table tr td:nth-child(2) {
+        width: 100%;
+    }
+    .cp article table tr td:before,
+    .ap article table tr td:before {
+        content: attr(data-title) "：";
+        display: inline-block;
+        color: #333;
+        font-weight: bolder
+    }
+    .cp article table tr td ul,
+    .cp article table tr td ol,
+    .ap article table tr td ul,
+    .ap article table tr td ol {
+        margin: 10px 0px 0 40px;
+    }
+    /*-*/
+    .cp article table.noBorder tr td:before,
+    .ap article table.noBorder tr td:before {
+        content: attr(data-title) "";
+        display: inline-block;
+        color: #333;
+        font-weight: bolder
+    }
+    /*-*/
+    .cp article table .aCenter,
+    .ap article table .aCenter {
+        text-align: left;
+    }
+    .cp article table .aRight,
+    .ap article table .aRight {
+        text-align: left;
+    }
+}
+.cp article p,
+.ap article p {
+    line-height: 2em;
+    margin: 0 0 1em 0;
+}
+//--------------------ul , ol
+.cp article ul,
+.cp article ol,
+.ap article ul,
+.ap article ol {
+    margin: 0px 10px 40px 30px;
+    padding: 0;
+}
+.cp article ul li,
+.ap article ul li {
+    margin: 0 0 10px 0;
+    list-style-type: disc;
+    line-height: 160%;
+}
+.cp article ol li,
+.ap article ol li {
+    list-style-type: decimal;
+    margin: 0 0 10px 0;
+    line-height: 160%;
+}
+//--------------------pubInfo
+.cp .pubInfo {
+    clear: both;
+    margin: 10px 0 20px;
+    background: #e6e6e6;
+    padding: 10px 20px;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        color: #000;
+        li {
+            margin: 0 0 5px 0;
+            padding: 0;
+            line-height: 150%;
+            list-style: none;
+            em {
+                font-style: normal;
+                font-weight: normal;
+                margin-left: 4px;
+                color: #444;
+            }
+        }
+    }
+}
+//--------------------map
+.cp article .gmap {
+    clear: both;
+    margin: 15px auto;
+    padding: 0;
+    border: 1px solid #CCC;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    iframe {
+        width: 100%;
+        height: 400px;
+    }
+}
+//--------------------attachment 附件
+.attachment,
+.seeAlso {
+    clear: both;
+    overflow: hidden;
+    margin: 5px 0px 15px;
+    padding: 0 0 10px;
+}
+.attachment h3,
+.seeAlso h3 {
+    font-size: 1.188em;
+    margin: 0 0 .9em;
+    padding: 8px 15px;
+    letter-spacing: 1px;
+    background-color: #e2e2e2;
+    color: #333;
+}
+.attachment ul,
+.seeAlso ul {
+    margin: 0 3px;
+    padding: 0;
+    list-style: none;
+    line-height: 150%;
+}
+.attachment li a,
+.seeAlso li a {
+    color: #333;
+    text-decoration: none;
+}
+.attachment li a:hover,
+.seeAlso li a:hover {
+    text-decoration: underline;
+}
+.attachment .updated {
+    margin: 0 0 0 40px;
+    color: #999;
+    padding-left: 10px;
+    border-left: 1px solid #ccc
+}
+.attachment .fileSize {
+    margin: 0 5px;
+    color: #999;
+    padding: 0;
+}
+.attachment .fileType {
+    margin-right: 5px;
+}
+.attachment .fileType img {
+    vertical-align: middle;
+}
+.attachment .filename li .explain {
+    margin: 0px 0 0px 10px;
+    vertical-align: middle;
+}
+@media (max-width: 767px) {
+    .attachment .filename li img {
+        width: auto !important;
+    }
+}
+//--------------------附件：檔案下載
+.attachment .filename li {
+    margin: 0 0 .5em;
+    padding: 0px 0 8px 25px;
+    background: url(../images/link_icon01.png) no-repeat 4px 9px;
+    border-bottom: 1px dotted #ccc4a8;
+}
+.attachment .filename li:only-child {
+    border: none;
+}
+.attachment .filename li span {
+    margin-left: .2em;
+}
+.attachment .filename li .fileSize {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .92em;
+}
+//--------------------附件：相關圖檔
+.attachment .images {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.attachment .images li {
+    overflow: hidden;
+    line-height: 23px;
+    margin: 2px 5px 10px 0;
+    padding: 10px 5px 5px;
+    display: inline-block;
+    width: 190px;
+    height: 228px;
+    text-align: center;
+    border: 1px solid #bbb;
+    background-color: #fff;
+    border-radius: 5px
+}
+@media (max-width:1200px) {
+    .attachment .images {
+        text-align: center;
+    }
+}
+@media (min-width:768px) and (max-width:1200px) {
+    .attachment .images li {
+        margin: 2px 5px 10px 0;
+    }
+}
+@media (min-width:660px) and (max-width:767px) {
+    .attachment .images {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .attachment .images li {
+        margin: 2px 5px 10px 0;
+    }
+}
+@media (min-width:480px) and (max-width:659px) {
+    .attachment .images {
+        margin: 0 auto;
+    }
+    .attachment .images li {
+        margin: 2px 5px 10px 0;
+    }
+}
+@media (max-width:479px) {
+    .attachment .images li {
+        margin: 2px 10px 10px 0;
+    }
+}
+.attachment .images li:hover {
+    background: #fff;
+}
+.attachment .images li a {
+    display: block;
+    margin: 0px;
+    font-size: .92em;
+}
+.attachment .images li a:hover {
+    text-decoration: none;
+}
+.attachment .images li img {
+    max-width: 180px;
+    max-height: 136px;
+    display: block;
+    margin: 0 auto 10px;
+}
+//--------------------相關連結
+.seeAlso ul {
+    list-style: none;
+    margin: 0 3px;
+    padding: 0;
+}
+.seeAlso ul li {
+    margin: 0 0 .5em;
+    padding: 0 0 8px 25px;
+    background: url(../images/link_icon01.png) no-repeat 4px 9px;
+    border-bottom: 1px dotted #bbb;
+}
+//cpblcok
+.cpblcok {
+    .col {
+        @include gutter(10px);
+    }
+}
+// 檔案下載
+.file_download {
+    width: 100%;
+    margin: 0 auto 20px;
+    @include clearfix();
+    h3 {
+        // font-size: 1.5em;
+        // padding: 12px 0px 15px 0px;
+        // margin: 0.5em 0px 0.2em;
+        // border-bottom: 1px solid $primaryColor;
+        font-size: 1.188em;
+        margin: 0 0 .9em;
+        padding: 8px 15px;
+        letter-spacing: 1px;
+        background-color: #e2e2e2;
+        color: #333;
+        border-bottom: none;
+    }
+    ul {
+        counter-reset: counter;
+        list-style-type: none;
+        padding: 0;
+        margin-left: 0;
+        @media screen and (max-width: 767px) {
+            margin-left: 0;
+        }
+    }
+    li {
+        position: relative;
+        padding-left: 2em;
+        border-bottom: 1px solid #ccc;
+        clear: both;
+        overflow: hidden;
+        padding-bottom: .5em;
+        padding-top: .5em;
+        &:hover {
+            background-color: lighten($color-yellow, 43);
+        }
+        span {
+            display: block;
+            margin-bottom: .2em;
+            line-height: 1.5em;
+        }
+        &:before {
+            position: absolute; // outline: 1px solid red;
+            top: 1em;
+            left: 1em;
+            text-align: right;
+            width: 30px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #333;
+            content: "";
+            // counter-increment: counter;
+            // content: counters(counter, ".") " . ";
+            // display:none;
+        }
+        .update,
+        .file_view {
+            font-size: .813em;
+            color: #AAA;
+            width: 120px;
+            padding-left: 35px;
+            float: none;
+            margin-top: 5px;
+            @media screen and (max-width: 767px) {
+                display: inline-block;
+                float: none;
+                width: auto;
+                margin-top: 0;
+            }
+            @include screen('xs_mobile') {
+                display: none;
+            }
+        }
+        .update {
+            width: 150px;
+            @media screen and (max-width: 767px) {
+                margin-left: 5px;
+            }
+        }
+        a {
+            // padding: .2em 0px .2em 65px;
+            padding: 0px;
+            position: relative;
+            height: auto;
+            line-height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0px .2em;
+            width: 48px;
+            text-align: center;
+            text-indent: -9999px;
+            height: 55px;
+            @include text-overflow;
+            @include box-sizing;
+            margin-bottom: .1em;
+            @include screen('mobile') {
+                margin: 0px auto .5em 0px;
+            }
+            &:hover, &:focus {
+                &:before {
+                    content: "";
+                    z-index: 99;
+                    position: absolute;
+                    border-radius: 4px;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: 0px 0px 0px 2px $lightColor inset;
+                }
+            }
+            .kb {
+                font-size: .75em;
+                color: #666;
+                display: none;
+                margin: 0px .5em;
+            }
+            &:after {
+                content: "";
+                background: url(../images/basic/download_file/icon_file.png) no-repeat center center;
+                background-size: contain;
+                width: 48px;
+                height: 52px;
+                position: absolute;
+                top: 3px;
+                left: 3px;
+                text-align: right;
+            }
+            // word系列
+            &[href$="doc"] {
+                &:after {
+                    background: url(../images/basic/download_file/icon_doc.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            &[href$="docx"] {
+                &:after {
+                    background: url(../images/basic/download_file/icon_docx.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            &[href$="odt"] {
+                &:after {
+                    background: url(../images/basic/download_file/icon_odt.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            // excel系列
+            &[href$="xls"] {
+                &:after {
+                    background: url(../images/basic/download_file/icon_xls.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            &[href$="csv"] {
+                &:after {
+                    background: url(../images/basic/download_file/icon_csv.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            &[href$="ods"] {
+                &:after {
+                    background: url(../images/basic/download_file/icon_ods.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            &[href$="xlsx"] {
+                &:after {
+                    background: url(../images/basic/download_file/icon_xlsx.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            // pdf系列
+            &[href$="pdf"] {
+                &:after {
+                    background: url(../images/basic/download_file/icon_pdf.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            &[href$="ppt"] {
+                &:after {
+                    background: url(../images/basic/download_file/icon_ppt.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            &[href$="pptx"] {
+                &:after {
+                    background: url(../images/basic/download_file/icon_pptx.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            &[href$="odp"] {
+                &:after {
+                    background: url(../images/basic/download_file/icon_odp.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            // 其他格式
+            &[href$="zip"] {
+                &:after {
+                    background: url(../images/basic/download_file/icon_zip.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            &[href$="txt"] {
+                &:after {
+                    background: url(../images/basic/download_file/icon_txt.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            &[href$="mov"] {
+                &:after {
+                    background: url(../images/basic/download_file/icon_mov.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            &[href$="mp3"] {
+                &:after {
+                    background: url(../images/basic/download_file/icon_mp3.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            &[href$="jpg"] {
+                &:after {
+                    background: url(../images/basic/download_file/icon_jpg.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            &[href$="wmv"] {
+                &:after {
+                    background: url(../images/basic/download_file/icon_wmv.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            &[href$="mp4"] {
+                &:after {
+                    background: url(../images/basic/download_file/icon_mp4.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+}

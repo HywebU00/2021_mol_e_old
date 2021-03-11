@@ -1,0 +1,672 @@
+/*----------------------------------------------Block1 第一組----*/
+.Block1 {
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+}
+.Block1 .col {
+    padding: 0;
+}
+.imagemap {
+    background-image: url('../images/block01bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 316px;
+    position: relative;
+}
+.imagemap.mid_autumn {
+    background-image: url('../images/block01bg_mid_autumn.jpg');
+}
+.imagemap.happynewyear {
+    background-image: url('../images/block01bg_happynewyear.jpg');
+}
+.imagemap.chinesenewyear {
+    background-image: url('../images/block01bg_chinesenewyear.jpg');
+}
+.imagemap.laborday {
+    background-image: url('../images/block01bg_laborday.jpg');
+}
+.imagemap.dragonboat {
+    background-image: url('../images/block01bg_dragonboat.jpg');
+}
+.slogan {
+    background-color: #004ea2;
+    color: #fff;
+    width: 280px;
+    font-size: 1.8125em;
+    padding: 12px 15px;
+    position: absolute;
+    top: 90px;
+    left: 0;
+}
+/*----------------------------------------------Block2 第二組----*/
+.Block2 {
+    padding: 0
+}
+.Block2 .container {
+    background-color: #66bb6a;
+}
+/* prefecture專區 */
+.prefecture {
+    background-color: #43a047;
+    padding: 50px 0px;
+    text-align: center;
+    margin: 0
+}
+.prefecture ul {
+    width: 136px;
+    margin: 0 auto;
+    padding: 0
+}
+.prefecture ul li {
+    margin: 0 0 23px;
+    position: relative;
+    display: block;
+    width: 136px;
+    height: 136px;
+    overflow: hidden;
+    color: #fff;
+}
+.prefecture ul li a {
+    display: block;
+    background-color: #0e6228;
+    color: #fff;
+    width: 136px;
+    height: 136px;
+}
+.prefecture ul li a:hover {
+    background-color: #073114;
+}
+.prefecture ul li a:focus {
+    box-shadow: 0 0 0 2px #ffbe00 inset;
+}
+.prefecture ul li a img {
+    width: 80%;
+    margin: 0 auto;
+}
+.prefecture ul li span {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 136px;
+}
+@media (max-width:991px) {
+    .prefecture {
+        padding: 50px 0px 30px;
+    }
+    .prefecture ul {
+        width: 100%
+    }
+    .prefecture ul li {
+        display: inline-block;
+        margin: 0 20px 20px 0;
+    }
+    .prefecture ul li:last-child {
+        margin: 0 0px 20px 0;
+    }
+}
+@media (max-width:645px) {
+    .prefecture ul li:last-child {
+        margin: 0 20px 20px 0;
+    }
+}
+@media (max-width:480px) {
+    .prefecture ul li:nth-child(2n) {
+        margin: 0 0px 20px 0;
+    }
+}
+@media (max-width:329px) {
+    .prefecture ul li {
+        margin: 0 0px 20px 0;
+    }
+}
+/* news */
+.news {
+    text-align: center;
+    padding: 40px 60px;
+}
+.news h2 {
+    font-size: 6.875em;
+    color: #022b0e;
+    margin: 0 0 20px;
+    padding: 0;
+    font-weight: 900;
+}
+.news ul {
+    margin: 0px;
+    padding: 0
+}
+.news ul li {
+    text-align: left;
+    margin: 0 0 15px;
+    overflow: hidden
+}
+.news ul li p {
+    overflow: hidden;
+    margin: 0;
+}
+.news ul li p:first-letter {
+    font-size: 1.875em
+}
+.news ul li a {
+    display: block;
+    padding: 25px 20px;
+    background-color: #fff;
+    height: 100px;
+    @include box-sizing(border-box);
+}
+.news ul li a:hover {
+    background-color: #ffbe00;
+    color: #000
+}
+.news ul li a:focus {
+    color: #cd4100;
+}
+.news ul li span {
+    float: left;
+    border-right: 1px solid #999;
+    padding: 0 20px 0 10px;
+    margin: 0 20px 0 0;
+    font-size: 1.25em;
+}
+@media (max-width:991px) {
+    .news ul li a {
+        height: 120px
+    }
+}
+@media (max-width:991px) {
+    .news {
+        padding: 40px 20px 80px;
+    }
+}
+@media (max-width:767px) {
+    .news h2 {
+        font-size: 5em;
+    }
+    .news ul li a {
+        height: auto
+    }
+}
+@media (max-width:399px) {
+    .news ul li span {
+        float: none;
+        border: none;
+        padding: 0;
+        margin: 0 0 20px;
+        display: block
+    }
+    .news ul li span br {
+        display: none
+    }
+}
+/*----------------------------------------------Block3 第三組----*/
+.Block3 {}
+.Block3 .container {
+    background-color: #dce775;
+    padding: 60px 0
+}
+.highlights {
+    margin: 0 30px
+}
+.highlights h2 {
+    color: #000;
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 2.187em;
+    text-align: center;
+}
+.highlightsdata {
+    margin: 0;
+    padding: 0 40px;
+}
+// .highlights div{
+//     margin: 0 0;
+//     padding: 20px;
+// }
+.highlights .datablock {
+    // background-color: rgba(255, 255, 255, .9);
+    height: 430px;
+    margin: 0 0px 0 0;
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+}
+.highlights div span {
+    text-align: center;
+    margin: 0 0 20px;
+    color: #eb0033;
+    display: block
+}
+.highlights div p {
+    text-align: left;
+    overflow: hidden
+}
+.highlights div p:first-letter {
+    font-size: 1.875em
+}
+.highlights .slick-prev {
+    left: 0px
+}
+.highlights .slick-next {
+    right: 0px
+}
+.highlights .slick-prev,
+.highlights .slick-next {
+    margin-top: -15px
+}
+.highlights .slick-prev:before,
+.highlights .slick-next:before {
+    font-size: 40px;
+    opacity: .75;
+    color: #00736d;
+}
+.highlights .slick-dots {
+    bottom: 0px;
+    margin: 0 0 0 -20px
+}
+.highlights .datablock a {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: block;
+    padding: 20px ;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, .8);
+    @include box-sizing(border-box);
+    .more {
+        position: absolute;
+        left: -100%;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .8);
+        color: #fff;
+        font-size: 5em;
+        text-align: center;
+        transition: .5s ease-out;
+        padding: 0;
+        line-height: 130%;
+        display: flex;
+        align-items: center;
+    }
+    &:hover, &:focus {
+        .more {
+            left: 0;
+        }
+    }
+}
+// .highlights .datablock .more {
+//     display: block;
+//     width: 100%;
+//     height: 430px;
+//     padding: 15px;
+//     background-color: #000;
+//     text-align: center;
+//     padding: 35% 0 0 0;
+//     line-height: 130%;
+// }
+// .highlights .datablock:hover .more {
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     background-color: #000;
+//     opacity: 0.8;
+// }
+// .highlights .datablock .more a:focus {
+//     /*  border: 2px solid #ffc000; */
+//     box-shadow: 0 0 0 3px #0e6228 inset;
+// }
+@media (max-width:1200px) {
+    .highlights .datablock .more {
+        font-size: 4em;
+    }
+    .highlights .datablock .more a {
+        padding: 50% 0 0 0
+    }
+}
+@media (max-width:991px) {
+    .highlights .datablock .more {
+        font-size: 5em;
+    }
+    .highlights .datablock .more a {
+        padding: 40% 0 0 0
+    }
+}
+@media (max-width:767px) {
+    .highlights .datablock .more {
+        font-size: 4em;
+    }
+    .highlights .datablock .more a {
+        padding: 50% 0 0 0
+    }
+}
+@media (max-width:640px) {
+    .highlights .datablock .more {
+        font-size: 3.5em;
+    }
+    .highlights .datablock .more a {
+        padding: 70% 0 0 0
+    }
+}
+@media (max-width:599px) {
+    .highlights .datablock .more {
+        font-size: 5em;
+    }
+    .highlights .datablock .more a {
+        padding: 30% 0 0 0
+    }
+}
+@media (max-width:450px) {
+    .highlights .datablock .more {
+        font-size: 4em;
+    }
+    .highlights .datablock .more a {
+        padding: 50% 0 0 0
+    }
+}
+@media (max-width:400px) {
+    .highlights .datablock .more {
+        font-size: 3em;
+    }
+    .highlights .datablock .more a {
+        padding: 80% 0 0 0
+    }
+}
+@media (max-width:360px) {
+    .highlights .datablock .more {
+        font-size: 2em;
+    }
+    .highlights .datablock .more a {
+        padding: 100% 0 0 0
+    }
+    .highlights div {
+        margin: 0 0;
+        padding: 10px;
+    }
+    .highlights .datablock {
+        background-color: #fffde1;
+        height: 430px;
+        margin: 0 20px 0 0;
+        overflow: hidden;
+        position: relative
+    }
+    .highlights .slick-dots {
+        bottom: -30px;
+        margin: 0 0 0 -10px
+    }
+    .highlights .slick-prev {
+        left: -18px
+    }
+    .highlights .slick-next {
+        right: 0px
+    }
+}
+/*----------------------------------------------Block4 第四組----*/
+.Block4 {
+    background-color: #fff;
+    padding: 50px 0
+}
+/* Related Links */
+.related_links {
+    text-align: center;
+}
+.related_links h2 {
+    font-size: 2.187em;
+    padding: 0 0 10px;
+    color: #000;
+    margin: 0 0 45px 0px;
+    border-bottom: 5px solid #43a047;
+    display: inline-block
+}
+.related_links ul {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+}
+.related_links ul li {
+    margin: 0 0px 5px 0px;
+    font-size: 1.25em;
+    background-color: #e5e5e5;
+    text-align: left;
+}
+.related_links ul li:nth-child(2n) {
+    background-color: #d2d2d2;
+}
+.related_links ul li a {
+    vertical-align: middle;
+    display: table-cell;
+    padding: 5px 15px 5px 120px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: 25px center;
+    @include box-sizing();
+}
+.related_links ul li a:hover {
+    color: #0e6228;
+}
+.related_links ul li a.no01 {
+    background-image: url('../images/link_logo01.png');
+}
+.related_links ul li a.no02 {
+    background-image: url('../images/link_logo02.png');
+}
+.related_links ul li a.no03 {
+    background-image: url('../images/link_logo03.png');
+}
+.related_links ul li a.no04 {
+    background-image: url('../images/link_logo04.png');
+}
+.related_links ul li a.no05 {
+    background-image: url('../images/link_logo05.png');
+}
+/* Social Links */
+.social_links {
+    text-align: center;
+    margin: 0 0 0 40px
+}
+.social_links h2 {
+    font-size: 2.187em;
+    padding: 0 0 10px;
+    color: #000;
+    margin: 0 0 45px 0px;
+    border-bottom: 5px solid #43a047;
+    display: inline-block;
+}
+.social_links ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.social_links ul li {
+    margin: 0 0px 8px 0px;
+    background-color: #e5e5e5;
+}
+.social_links ul li.no01 {
+    background-color: #4867aa
+}
+.social_links ul li.no02 {
+    background-color: #c9c9c9
+}
+.social_links ul li.no03 {}
+.social_links ul li.no04 {
+    background-color: #00c200
+}
+.social_links ul li a {
+    padding: 15px 0 14px;
+    display: block;
+    @include box-sizing();
+}
+@media (max-width:991px) {
+    .social_links {
+        text-align: center;
+        margin: 50px 0 0 0
+    }
+}
+//聯絡方式-------------------------------------------
+.connectionblock {
+    background-color: $primaryColor;
+    position: relative;
+    margin: 0;
+    height: 140px;
+    z-index: 9;
+    @include screen('mobile') {
+        height: auto;
+    }
+    @media(max-width:380px) {
+        padding-bottom: 10px;
+    }
+    &:before {
+        content: '';
+        background-color: $secondaryColor;
+        width: 60%;
+        height: 140px;
+        display: block;
+        position: absolute;
+        transform: skewX(-15deg);
+        top: 0;
+        left: -10%;
+        @include screen('mobile') {
+            display: none
+        }
+    }
+    .container {
+        color: #fff;
+        font-size: .938em;
+        @include gutter(100px); //gutter 代表左右要留白
+        @media(max-width: 500px) {
+            @include gutter(50px);
+        }
+        .leftblock {
+            background-image: url(../images/connection_icon01.png);
+            background-repeat: no-repeat;
+            ;
+            background-position: 20% 30px;
+            ul {
+                margin: 25px 0 0 33%;
+                padding: 0;
+                list-style: none;
+                height: 100px;
+                li {}
+            }
+            @include screen('mobile') {
+                border-bottom: 1px solid $color-gray;
+                padding-bottom: 20px;
+                ul {
+                    height: auto
+                }
+            }
+            @include screen('xs_mobile') {
+                background-position: 10% 30px;
+                ul {
+                    margin: 25px 0 0 25%;
+                }
+            }
+            @media(max-width:500px) {
+                background-position: 5% 30px;
+                ul {
+                    margin: 25px 0 0 20%;
+                }
+            }
+            @media(max-width:380px) {
+                background-position: 0 30px;
+                ul {
+                    margin: 25px 0 0 20%;
+                }
+            }
+        }
+        .rightblock {
+            background-image: url(../images/connection_icon02.png);
+            background-repeat: no-repeat;
+            ;
+            background-position: 20% 40px;
+            .address {
+                margin: 30px 0 0 30%;
+                padding: 0;
+                height: 100px;
+                a {
+                    display: block;
+                    text-align: center;
+                    background-color: #fff;
+                    padding: 5px 20px;
+                    width: 180px;
+                    border-radius: 5px;
+                    color: $primaryColor;
+                    margin-top: 7px;
+                    &:hover {
+                        background-color: $primaryColor;
+                        color: #fff;
+                        border: 1px solid #fff;
+                        border-radius: 5px;
+                    }
+                }
+                @include screen('mobile') {
+                    margin: 20px 0 0 33%;
+                    height: auto;
+                    padding-bottom: 20px;
+                }
+            }
+            @include screen('mobile') {
+                background-position: 20% 30px;
+            }
+            @include screen('xs_mobile') {
+                background-position: 10% 40px;
+                .address {
+                    margin: 30px 0 0 25%;
+                }
+            }
+            @media(max-width:500px) {
+                background-position: 5% 30px;
+                .address {
+                    margin: 30px 0 0 20%;
+                }
+            }
+            @media(max-width:380px) {
+                background-position: 0 30px;
+                .address {
+                    margin: 25px 0 0 20%;
+                }
+            }
+        }
+    }
+}
+// 影片燈箱區
+.movie_lightbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999999;
+    .moviebox {
+        width: 60%;
+        margin: 5% auto;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 35px 25px;
+        position: relative;
+        @media(max-width: 767px) {
+            width: 80%;
+        }
+    }
+    .close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .movie {
+        margin: 30px 0 0;
+        width: 100%;
+        height: 400px;
+        iframe {
+            width: 100%;
+            height: 400px;
+        }
+        embed {
+            width: 100%;
+            height: 400px;
+        }
+    }
+}
