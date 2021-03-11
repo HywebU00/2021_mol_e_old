@@ -190,14 +190,18 @@ $(function() {
     });
 })
 // 點外面關閉
-$(function() {
-    $(document).on('touchend click', function(e) {
-        var container = $(".header .searchbtn");
-        if (!container.is(e.target) && container.has(e.target).length === 0) {
-            $('.header .searchin').slideUp();
-        }
+$('.main').off().on('click touchend', function(e) {
+        $('.searchin').slideUp();
+        search_mode = false;
     });
-})
+// $(function() {
+//     $(document).on('touchend click', function(e) {
+//         var container = $(".header .searchbtn");
+//         if (!container.is(e.target) && container.has(e.target).length === 0) {
+//             $('.header .searchin').slideUp();
+//         }
+//     });
+// })
 //我要發問
 $(function() {
     $('.question .button').click(function() {
