@@ -201,12 +201,24 @@ $(function() {
 })
 //我要發問
 $(function() {
+     var question_btnStatus = false; // 假的判斷式，先設定沒有開啟
     $('.question .button').click(function() {
         $('.question .block').stop().slideToggle();
     })
     $('.question .del').click(function() {
         $('.question .block').stop().slideUp();
     })
+    
+    $('.question ul li:last a').focusout(function(){
+        $('.question .block').stop().slideUp();
+    })
+    if (question_btnStatus = true) {
+        $('body').keydown(function(e) {
+            if (e.keyCode == 27) {
+                $('.question .block').slideUp();
+            }
+        });
+    }
 })
 //生育福利站
 $(function() {
