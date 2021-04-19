@@ -15,6 +15,13 @@
     }
     article {
         clear: both;
+        a:focus {
+            img {
+                outline: none;
+                max-width: 100%;
+                box-shadow: 0 0px 0px 2px #f2ba1d;
+            }
+        }
         figure {
             float: left;
             margin: 5px 15px 15px 2px;
@@ -30,6 +37,32 @@
                 margin: 0 0 10px;
                 @include screen('xs_mobile') {
                     width: 100%;
+                }
+            }
+            a {
+                position: relative;
+                height: 100%;
+                width: 100%;
+                display: block;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 100%;
+                    box-shadow: 0 0px 0px 2px #ffc000 inset;
+                    display: none;
+                }
+                &:focus:before {
+                    display: block;
+                }
+                &:focus {
+                    img {
+                        box-shadow: none;
+                    }
                 }
             }
             figcaption {
@@ -58,25 +91,6 @@
                     line-height: 140%;
                     width: 96%;
                     max-width: 240px;
-                }
-                a {
-                    position: relative;
-                    height: 100%;
-                    width: 100%;
-                    display: block;
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        bottom: 0;
-                        right: 0;
-                        border: 2px solid #ffc000;
-                        display: none;
-                    }
-                    &:focus:before {
-                        display: block;
-                    }
                 }
             }
         }
@@ -364,13 +378,13 @@
 }
 .attachment .updated {
     margin: 0 0 0 40px;
-    color: #999;
+    color: #666;
     padding-left: 10px;
     border-left: 1px solid #ccc
 }
 .attachment .fileSize {
     margin: 0 5px;
-    color: #999;
+    color: #666;
     padding: 0;
 }
 .attachment .fileType {
